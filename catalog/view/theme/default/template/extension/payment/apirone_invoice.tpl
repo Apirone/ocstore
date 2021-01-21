@@ -44,7 +44,7 @@
 
         input_address = jQuery('.abf-input-address').html(); 
         encoded_msg = encodeURIComponent("bitcoin:" + input_address + "?amount=" + data.remains_to_pay + "&label=Apirone");
-        src = 'https://apirone.com/api/v1/qr?message=' + encoded_msg;
+        src = 'https://chart.googleapis.com/chart?chs=225x225&cht=qr&chl=' + encoded_msg;
         jQuery('.abf-img-height').hide();
         jQuery('.abf-img-height').attr('src', src);
         jQuery('.abf-img-height').show();
@@ -97,7 +97,7 @@
                 <div class="abf-ash1"><img src="/catalog/view/theme/default/image/apirone_bitcoin_logo.svg" alt=""></div>
             </div>
             <div style="text-align: center; background-color:#fff;"><span class="abf-qr">
-               <img class="abf-img-height" src="https://apirone.com/api/v1/qr?message=<?php echo $message ?>">
+               <img class="abf-img-height" src="https://chart.googleapis.com/chart?chs=225x225&cht=qr&chl=<?php echo $message ?>">
                </span>
             </div> 
         </div>
